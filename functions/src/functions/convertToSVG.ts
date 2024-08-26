@@ -1,7 +1,5 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable max-len */
 /* eslint-disable object-curly-spacing */
-
 import * as functions from "firebase-functions";
 import axios from "axios";
 import { png2svg } from "svg-png-converter";
@@ -29,7 +27,7 @@ export const convertToSVG = functions.https.onRequest(async (req, res) => {
       input: inputImage,
       tracer: "imagetracer", // Use 'imagetracer' for color output
       optimize: true, // Optimize the SVG output
-      numberofcolors: 16, // Limit the number of colors to control output size
+      numberofcolors: 8, // Limit the number of colors to control output size
       pathomit: 2, // Omit small paths to reduce noise
     });
 
